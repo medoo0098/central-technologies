@@ -14,32 +14,32 @@ const services = [
   {
     icon: Wifi,
     title: "Network & Connectivity",
-    description: "Design and deployment of wired and wireless infrastructure for homes, garden offices, and multi-building estates. We resolve persistent Wi-Fi issues, eliminate dead spots, and ensure seamless coverage for work, entertainment, and guests throughout your property."
+    description: "Design and oversight of wired and wireless infrastructure for larger homes, garden offices, guest areas, and multi-building properties. We resolve persistent Wi-Fi issues and improve reliability throughout the property."
   },
   {
     icon: Home,
     title: "Smart Home Integration",
-    description: "Integration of lighting, climate, entertainment, and security systems into a cohesive experience. We work with leading platforms and ensure everything operates reliably — without requiring a manual to use."
+    description: "Coordination and support for lighting, climate, entertainment, and security systems so the household can rely on technology without having to manage technical complexity."
   },
   {
     icon: Monitor,
     title: "Device Setup & Migration",
-    description: "Independent advice, procurement support, setup, and full data migration for new computers, phones, and tablets. Old devices are securely wiped and prepared for resale, handover, or recycling."
+    description: "Procurement support, setup, and full migration for new computers, phones, and tablets, with careful handover and minimal disruption to the principal or household staff."
   },
   {
     icon: Shield,
     title: "Cybersecurity & Privacy",
-    description: "Practical security assessments tailored for private households. We configure password managers, enable two-factor authentication, review privacy settings, and provide straightforward guidance for every household member."
+    description: "Practical security reviews for private households, including password management, two-factor authentication, privacy settings, and sensible protection for family members and staff."
   },
   {
     icon: Tv,
     title: "AV & Entertainment Systems",
-    description: "Specification, installation oversight, and programming of audio-visual equipment across multiple rooms or zones. We coordinate with specialist AV installers and ensure your systems are configured correctly."
+    description: "Specification support, installation oversight, and troubleshooting for multi-room audio, television, and entertainment systems, including coordination with specialist installers when required."
   },
   {
     icon: Headphones,
     title: "Ongoing Support & Maintenance",
-    description: "Scheduled on-site visits for system health checks, software updates, and proactive maintenance. We monitor your environment and address small issues before they become larger problems."
+    description: "Regular reviews, updates, troubleshooting, and coordination so the household has one trusted point of contact instead of a collection of disconnected suppliers."
   },
 ];
 
@@ -59,10 +59,13 @@ export default function Services() {
             Our Services
           </h1>
           <p className="text-xl text-muted-foreground font-light leading-relaxed mb-6">
-            Central Technologies offers a comprehensive range of on-site IT support and technology management services for London households. Every engagement is delivered at your residence by appointment, with the discretion and professionalism your home deserves.
+            Central Technologies provides on-site technology support for private households that expect reliability, discretion, and clear communication.
+          </p>
+          <p className="text-lg text-muted-foreground/80 leading-relaxed mb-6">
+            We support principals, families, and the assistants who act on their behalf. Engagements range from resolving a specific issue to acting as an ongoing household technology partner.
           </p>
           <p className="text-lg text-muted-foreground/80 leading-relaxed">
-            We provide both one-off home visits and ongoing support arrangements. Whether you need a specific issue resolved or prefer a long-term technology partner, we tailor our services to suit your household's needs.
+            The emphasis is on calm execution, sensible recommendations, and reducing the time the household has to spend thinking about technology.
           </p>
         </motion.div>
       </section>
@@ -97,15 +100,10 @@ export default function Services() {
 
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 max-w-3xl text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Engagement & Fees</h2>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              Consultations start at £300 + VAT. This covers an initial on-site assessment, hands-on work, and a written summary of findings. Ongoing support packages are structured around your household's requirements and are available upon request.
+              Consultations start at GBP300 + VAT. This includes an initial on-site assessment, hands-on work, and clear written follow-up. Ongoing support arrangements are structured around the household's needs and the level of continuity required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" data-testid="link-start-inquiry">

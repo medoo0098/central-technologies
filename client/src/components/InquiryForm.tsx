@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import { motion } from "framer-motion";
 
 export function InquiryForm() {
   const mutation = useCreateInquiry();
@@ -39,11 +38,11 @@ export function InquiryForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Name <span className="text-destructive">*</span></FormLabel>
+                <FormLabel className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Your Name <span className="text-destructive">*</span></FormLabel>
                 <FormControl>
-                  <Input 
-                    placeholder="Full Name" 
-                    {...field} 
+                  <Input
+                    placeholder="Your name"
+                    {...field}
                     className="bg-secondary/30 border-transparent focus:border-primary/20 focus:bg-white transition-all h-12 text-base"
                   />
                 </FormControl>
@@ -59,9 +58,9 @@ export function InquiryForm() {
               <FormItem>
                 <FormLabel className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Email Address <span className="text-destructive">*</span></FormLabel>
                 <FormControl>
-                  <Input 
-                    placeholder="email@example.com" 
-                    {...field} 
+                  <Input
+                    placeholder="name@example.com"
+                    {...field}
                     className="bg-secondary/30 border-transparent focus:border-primary/20 focus:bg-white transition-all h-12 text-base"
                   />
                 </FormControl>
@@ -77,10 +76,10 @@ export function InquiryForm() {
               <FormItem>
                 <FormLabel className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Phone (Optional)</FormLabel>
                 <FormControl>
-                  <Input 
-                    placeholder="+44 7700 900000" 
-                    {...field} 
-                    value={field.value || ''}
+                  <Input
+                    placeholder="+44 7700 900000"
+                    {...field}
+                    value={field.value || ""}
                     className="bg-secondary/30 border-transparent focus:border-primary/20 focus:bg-white transition-all h-12 text-base"
                   />
                 </FormControl>
@@ -94,11 +93,11 @@ export function InquiryForm() {
             name="requirements"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Requirements <span className="text-destructive">*</span></FormLabel>
+                <FormLabel className="text-sm font-medium uppercase tracking-wide text-muted-foreground">How Can We Help? <span className="text-destructive">*</span></FormLabel>
                 <FormControl>
-                  <Textarea 
-                    placeholder="Please outline how we can assist..." 
-                    {...field} 
+                  <Textarea
+                    placeholder="Please outline the household, principal, or issue involved, along with any timing, access, or coordination details."
+                    {...field}
                     className="min-h-[160px] resize-none bg-secondary/30 border-transparent focus:border-primary/20 focus:bg-white transition-all text-base leading-relaxed p-4"
                   />
                 </FormControl>
@@ -107,24 +106,24 @@ export function InquiryForm() {
             )}
           />
 
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full h-14 text-base font-semibold tracking-wide uppercase bg-primary hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
             disabled={mutation.isPending}
           >
             {mutation.isPending ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Submitting...
+                Sending...
               </>
             ) : (
-              "Submit Inquiry"
+              "Send Private Inquiry"
             )}
           </Button>
 
           <div className="text-center space-y-2 pt-2">
             <p className="text-xs text-muted-foreground">
-              All inquiries are held in strict confidence. We do not respond to solicitations.
+              All enquiries are handled in strict confidence. Personal assistants and household representatives are welcome to enquire on behalf of a principal.
             </p>
           </div>
         </form>

@@ -11,7 +11,7 @@ export function PageFooter() {
                 Central Technologies
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Private technology management for households and executives across London and neighbouring counties.
+                Trusted on-site technology support for private households, principals, and personal assistants across London and neighbouring counties.
               </p>
             </div>
             <div className="md:w-1/3">

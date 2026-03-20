@@ -16,7 +16,7 @@ const ORGANIZATION_SCHEMA = {
   telephone: "+447718137455",
   vatID: "GB338720296",
   description:
-    "Discreet technology management for private households and executives across Greater London",
+    "Discreet technology management for private households and executive clients across Greater London",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Hampstead",
@@ -56,279 +56,191 @@ const ORGANIZATION_SCHEMA = {
     areaServed: "GB",
     availableLanguage: ["en-GB"],
   },
-  priceRange: "From £300 + VAT",
+  priceRange: "From GBP300 + VAT",
   knowsAbout: [
-    "On-site IT Support",
+    "Private Household IT Support",
     "Home Visit IT Support",
+    "Personal Assistant Technology Coordination",
     "Home Network Setup",
     "Smart Home Integration",
     "Cybersecurity",
     "Device Management",
-    "AV Systems",
     "Technology Consulting",
   ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Technology Management Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "On-Site IT Support (Home Visits)",
-          description:
-            "Professional, on-site IT support delivered through scheduled home visits across London. Troubleshooting, device setup, network diagnostics, and ongoing care for private households",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Network & Connectivity",
-          description:
-            "Design and deployment of wired and wireless infrastructure for homes, garden offices, and multi-building estates",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Smart Home Integration",
-          description:
-            "Integration of lighting, climate, entertainment, and security systems into a cohesive, user-friendly experience",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Device & Account Management",
-          description:
-            "Setup, configuration, and ongoing care for all household devices, from personal electronics to shared systems",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Cybersecurity & Privacy",
-          description:
-            "Assessment of current risks, implementation of protective measures, and training for all household members",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "AV & Entertainment Systems",
-          description:
-            "Specification, installation oversight, and programming of audio-visual equipment across multiple rooms or zones",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Ongoing Support",
-          description:
-            "Periodic check-ins, software updates, and system checks to ensure everything runs smoothly",
-        },
-      },
-    ],
-  },
 };
 
 const prerenderMap: Record<string, PrerenderData> = {
   "/": {
-    title: "Central Technologies – Private, On-Site IT Support for London Households",
+    title: "Private IT Support for London Households | Central Technologies",
     description:
-      "Discreet technology management and home IT support for busy families, executives, and personal assistants across Greater London. On-site support by appointment. Consultations from £300 + VAT.",
+      "Discreet on-site IT support and technology management for private households, principals, and personal assistants across London. Home visits by appointment from GBP300 + VAT.",
     html: `<div>
-<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Households</a><a href="/contact">Inquire</a></nav>
+<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></nav>
 <h1>Private, On-Site IT Support for London Households</h1>
-<p>Discreet technology management and home IT support for busy families, executives, and the personal assistants who support them across Greater London.</p>
-<p>From resolving urgent issues to overseeing your entire home technology environment, Central Technologies provides calm, reliable on-site IT support through scheduled home visits across London.</p>
-<p>We don’t offer rushed, transactional fixes. We build long-term relationships based on discretion, continuity, and tailored solutions that fit how your household operates.</p>
-<p><a href="/it-support-home-visit-london">Home visits by appointment</a> &middot; Serving all London boroughs &middot; PA and managing agent friendly</p>
+<p>Discreet technology support for private households, principals, and the personal assistants who keep everything running.</p>
+<p>Central Technologies acts as a trusted, low-friction point of contact for household technology - resolving urgent issues, planning upgrades, coordinating vendors, and keeping home and executive setups dependable.</p>
+<p>Our service is designed for clients who value continuity, discretion, and clear communication over quick-fix call-out support. We work with a limited number of households so each engagement is handled properly.</p>
+<p><a href="/it-support-home-visit-london">Home visits by appointment</a> &middot; Serving all London boroughs &middot; Trusted by personal assistants and household representatives</p>
 <h2>What We Do</h2>
-<p>We ensure your home’s technology remains dependable, secure, and unobtrusive. Whether resolving persistent connectivity issues, replacing devices without disruption, or coordinating secure data migration, we handle planning, execution, and long-term support—on-site when required and remotely where practical. Our role is to anticipate and prevent problems, not merely react to them.</p>
+<p>We keep household technology dependable, secure, and easy to live with. That may mean resolving persistent connectivity issues, replacing devices without disruption, preparing a home office before an important trip, or quietly coordinating with suppliers so the household does not have to.</p>
 <h2>Typical Engagements</h2>
 <h3>Home Networks</h3>
-<p>Reliable Wi-Fi and wired connectivity throughout the property, including difficult layouts and larger homes. Seamless coverage for work, entertainment, and guests.</p>
-<h3>New Devices &amp; Replacement</h3>
-<p>Independent advice, procurement support, setup, and full data migration. Old devices are securely wiped and prepared for resale, handover, or recycling.</p>
+<p>Reliable Wi-Fi and wired connectivity throughout the property, including larger homes, guest areas, and difficult layouts.</p>
+<h3>Device Replacement &amp; Migration</h3>
+<p>Procurement support, setup, and full migration for new computers, phones, and tablets, with minimal interruption.</p>
 <h3>Privacy &amp; Security</h3>
-<p>Practical security reviews, password management setup, two-factor authentication, and data protection measures tailored for private households.</p>
+<p>Practical security reviews, password management, and privacy measures suited to private households and executive lifestyles.</p>
 <h3>Ongoing Household Support</h3>
-<p>Scheduled health checks, software updates, and system reviews to keep your environment secure and reliable. We offer advice and support when troubleshooting or interacting with service providers, while you remain in control of your accounts and choices.</p>
-<h3>Concierge Service</h3>
-<p>Our technicians work independently and discreetly, resolving most issues with minimal interaction. Ideal for busy households or when occupants prefer not to be disturbed.</p>
-<h2>Our Approach</h2>
-<h3>Discretion</h3>
-<p>We work quietly and professionally, treating client systems, layouts, and information as strictly confidential.</p>
-<h3>Respect for Time</h3>
-<p>Appointments are structured to resolve issues properly. Evening and weekend availability is offered, and we coordinate directly with assistants if preferred.</p>
-<h3>Independent Advice</h3>
-<p>We do not sell hardware or receive commissions. Recommendations are based solely on suitability, longevity, and value.</p>
+<p>Scheduled reviews, updates, troubleshooting, and oversight so issues are handled before they become interruptions.</p>
+<h3>PA &amp; Vendor Coordination</h3>
+<p>We can work directly with personal assistants, family offices, managing agents, and specialist suppliers to reduce admin and keep decisions moving.</p>
+<h2>For Personal Assistants</h2>
+<p>We understand that assistants are often asked to solve technology issues quickly, discreetly, and with minimal supervision. Our service is built to make that easier: one reliable contact, calm on-site delivery, and clear written follow-up.</p>
 <h2>About Us</h2>
-<p>Central Technologies is led by a seasoned technology professional with years of experience supporting private households and executive clients in London. Our clients come from long-term relationships built on trust and discretion.</p>
+<p>Central Technologies is led by a senior technology professional with experience supporting private households and executive clients in London. Our work is built around trust, continuity, and the ability to operate confidently in environments where discretion matters.</p>
 <h2>Engagement &amp; Fees</h2>
-<p>Central Technologies operates as a professional service, prioritising long-term relationships where we can understand and support your household’s technology needs. Consultations start at £300 + VAT. Detailed fee structures for ongoing support contracts are available upon request following an initial consultation.</p>
+<p>Consultations start at GBP300 + VAT and include an initial assessment, hands-on work, and clear written follow-up. Ongoing support arrangements are available for households that prefer continuity and a single trusted point of contact.</p>
 <h2>Private Inquiry</h2>
-<p>We work with a limited number of households to maintain service quality. Whether you are a homeowner or a personal assistant acting on their behalf, please outline your requirements below.</p>
-<footer><p>Central Technologies – Private technology management for households and executives across London and neighbouring counties.</p><p>Service Area: All London boroughs and nearby commuter regions including Surrey, Hertfordshire, Buckinghamshire, and Essex.</p><a href="/services">Our Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></footer>
+<p>Whether you are enquiring for your own household or on behalf of a principal, you are welcome to send a concise brief. We will review the requirements and respond if we believe we are the right fit.</p>
+<footer><p>Trusted on-site technology support for private households, principals, and personal assistants across London and neighbouring counties.</p><p>Service Area: All London boroughs and nearby commuter regions including Surrey, Hertfordshire, Buckinghamshire, and Essex.</p><a href="/services">Our Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></footer>
 </div>`,
   },
-
   "/it-support-home-visit-london": {
     title: "IT Support Home Visits Across London | Central Technologies",
     description:
-      "Professional on-site IT support for private households across all London boroughs. Home visits by appointment for Wi-Fi, device setup, security, and data recovery. From £300 + VAT.",
+      "Professional on-site IT support for private households, principals, and personal assistants across London. Home visits by appointment from GBP300 + VAT.",
     html: `<div>
-<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Households</a><a href="/contact">Inquire</a></nav>
+<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></nav>
 <h1>IT Support Home Visits Across London</h1>
-<p>Central Technologies provides professional, on-site IT support for private households across all London boroughs. We visit your home by appointment, working discreetly and efficiently to resolve technology issues without disrupting your routine.</p>
-<p>Whether you are dealing with unreliable Wi-Fi, need assistance migrating to a new device, or require ongoing technology oversight, our technicians bring the expertise to you. We work directly with homeowners, executives, and personal assistants who value a considered approach over a rushed one.</p>
-<p>Unlike high-volume call-out services, we limit the number of households we support. This allows us to understand your environment thoroughly and deliver permanent, well-planned solutions. Every home visit begins with a proper assessment and ends with clear documentation of the work completed.</p>
+<p>Central Technologies provides professional, on-site IT support for private households across London. Visits are by appointment and designed to be calm, discreet, and efficient.</p>
+<p>We support homeowners, principals, and personal assistants who need technology issues handled properly, without unnecessary disruption or repeated chasing.</p>
+<p>Unlike high-volume call-out services, we limit the number of households we support. That allows us to understand the property, work confidently on-site, and provide clear follow-up after each visit.</p>
 <h2>Common Requests</h2>
 <ul>
-<li>Wi-Fi and network troubleshooting — resolving persistent connectivity issues, dead spots, and slow performance across the property</li>
-<li>New device setup and data migration — transferring files, accounts, and settings to new computers, phones, or tablets with zero disruption</li>
-<li>Security and privacy review — assessing current risks, configuring password managers, enabling two-factor authentication, and advising on data protection</li>
-<li>Backup and recovery — establishing reliable local and cloud backup routines, or recovering data from failing or damaged devices</li>
+<li>Wi-Fi and network troubleshooting for persistent connectivity issues, dead spots, and inconsistent coverage across the property</li>
+<li>New device setup and data migration for principals, family members, or staff, completed with minimal interruption</li>
+<li>Security and privacy reviews, including password managers, two-factor authentication, and practical protection for household accounts</li>
+<li>Backup, recovery, and handover support where there is urgency around travel, device failure, or important work commitments</li>
 </ul>
 <h2>How It Works</h2>
-<p>All engagements begin with a brief consultation — by phone, email, or through your PA — to understand the scope of work. We then schedule a home visit at a time that suits your household. Most visits are completed within a single session, though complex projects may require a planned series of appointments.</p>
-<p>Consultations begin at £300 + VAT. This covers an initial assessment, hands-on resolution, and a written summary of findings and recommendations. Ongoing support arrangements are available for households that prefer regular, proactive care.</p>
+<p>Every engagement begins with a concise consultation by phone, email, or through your PA. Once we understand the requirement, we schedule a visit at a time that suits the household and arrive prepared to handle the work properly.</p>
+<p>Consultations begin at GBP300 + VAT. This covers the initial assessment, hands-on work, and clear written follow-up with any recommendations or next steps.</p>
 <p><a href="/contact">Request a Home Visit</a> | <a href="/services">View All Services</a></p>
-<footer><p>Central Technologies – Private technology management for households and executives across London and neighbouring counties.</p><p>Service Area: All London boroughs and nearby commuter regions including Surrey, Hertfordshire, Buckinghamshire, and Essex.</p><a href="/services">Our Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></footer>
+<footer><p>Trusted on-site technology support for private households, principals, and personal assistants across London and neighbouring counties.</p><a href="/services">Our Services</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></footer>
 </div>`,
   },
-
   "/private-household-technology": {
     title: "Technology Management for Private Households | Central Technologies",
     description:
-      "Ongoing on-site technology management for private households across London and the Home Counties. Dedicated support for families, executives, PAs, and managing agents.",
+      "Ongoing on-site technology management for private households across London and the Home Counties, with discreet coordination for principals, assistants, and household teams.",
     html: `<div>
-<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Households</a><a href="/contact">Inquire</a></nav>
+<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></nav>
 <h1>Technology Management for Private Households</h1>
-<p>Central Technologies provides ongoing, on-site technology management for private households across London and the Home Counties. We serve as your household’s dedicated technology partner — available when needed, invisible when not.</p>
-<p>Our clients include busy professionals, families with complex technology environments, and estate managers overseeing multiple properties. Many engagements are arranged through personal assistants, managing agents, or family offices who value a single, trusted point of contact for all technology matters.</p>
-<p>Rather than offering reactive one-off fixes, we focus on understanding your household’s specific needs and maintaining systems proactively. This includes scheduled health checks, coordinating with broadband providers and smart home installers, and ensuring every device in your home operates reliably and securely.</p>
+<p>Central Technologies provides ongoing, on-site technology management for private households across London and the Home Counties. We serve as a trusted technology partner for homes where discretion, continuity, and ease matter.</p>
+<p>Our clients include busy professionals, family households, principals with demanding schedules, and assistants who need one reliable point of contact for household technology.</p>
+<p>Rather than offering reactive one-off fixes, we focus on understanding how the household operates, maintaining systems proactively, and coordinating smoothly with assistants, staff, and external suppliers.</p>
 <h2>Typical Household Requirements</h2>
 <ul>
-<li>Whole-home network design and Wi-Fi optimisation for large or multi-storey residences, garden offices, and outbuildings</li>
-<li>Coordination with PAs and managing agents — we liaise on your behalf, handling vendor calls, scheduling, and follow-up</li>
-<li>Family-wide cybersecurity — age-appropriate device settings, parental controls, secure password management, and privacy guidance</li>
-<li>Scheduled maintenance visits to review system health, apply updates, and resolve minor issues before they escalate</li>
-<li>Home office technology for executives — reliable video conferencing, secure file access, and dedicated business connectivity</li>
+<li>Whole-home network design and Wi-Fi optimisation for larger residences, guest spaces, garden offices, and outbuildings</li>
+<li>Coordination with personal assistants, managing agents, and household representatives so issues are handled without unnecessary back-and-forth</li>
+<li>Family-wide cybersecurity, privacy settings, and sensible controls for shared devices, staff access, and household accounts</li>
+<li>Scheduled maintenance visits to review system health, apply updates, and prevent minor issues from becoming disruptions</li>
+<li>Home office and executive support, including reliable video calls, device readiness, travel preparation, and secure access</li>
 </ul>
 <h2>Our Commitment</h2>
-<p>We work with a deliberately small number of households to ensure each receives attentive, personalised service. Every engagement is treated with complete confidentiality. We do not discuss one client’s setup with another, and we are happy to work under NDA where required.</p>
-<p>All recommendations are independent — we do not sell hardware or receive commissions from vendors. Our sole interest is in providing solutions that are suitable, reliable, and appropriate for your home.</p>
+<p>We work with a deliberately limited number of households so each client receives careful attention. Every engagement is handled confidentially, and we are comfortable working in environments where discretion and trust are essential.</p>
+<p>Recommendations are independent and practical. Our job is to make the household easier to run, not to introduce unnecessary complexity or vendor noise.</p>
 <p><a href="/contact">Request a Consultation</a> | <a href="/it-support-home-visit-london">About Home Visits</a></p>
-<footer><p>Central Technologies – Private technology management for households and executives across London and neighbouring counties.</p><p>Service Area: All London boroughs and nearby commuter regions including Surrey, Hertfordshire, Buckinghamshire, and Essex.</p><a href="/services">Our Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></footer>
+<footer><p>Trusted on-site technology support for private households, principals, and personal assistants across London and neighbouring counties.</p><a href="/services">Our Services</a><a href="/contact">Request Consultation</a></footer>
 </div>`,
   },
-
   "/services": {
-    title: "Our Services | Central Technologies – On-Site IT Support London",
+    title: "Our Services | Central Technologies",
     description:
-      "Comprehensive on-site IT support and technology management for London households. Network design, smart home integration, cybersecurity, device setup, AV systems, and ongoing maintenance.",
+      "On-site technology support for private households in London, including network reliability, device migration, privacy, smart home coordination, and ongoing household support.",
     html: `<div>
-<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Households</a><a href="/contact">Inquire</a></nav>
+<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></nav>
 <h1>Our Services</h1>
-<p>Central Technologies offers a comprehensive range of on-site IT support and technology management services for London households. Every engagement is delivered at your residence by appointment, with the discretion and professionalism your home deserves.</p>
-<p>We provide both one-off home visits and ongoing support arrangements. Whether you need a specific issue resolved or prefer a long-term technology partner, we tailor our services to suit your household’s needs.</p>
-<h2>Network &amp; Connectivity</h2>
-<p>Design and deployment of wired and wireless infrastructure for homes, garden offices, and multi-building estates. We resolve persistent Wi-Fi issues, eliminate dead spots, and ensure seamless coverage for work, entertainment, and guests throughout your property.</p>
-<h2>Smart Home Integration</h2>
-<p>Integration of lighting, climate, entertainment, and security systems into a cohesive experience. We work with leading platforms and ensure everything operates reliably — without requiring a manual to use.</p>
-<h2>Device Setup &amp; Migration</h2>
-<p>Independent advice, procurement support, setup, and full data migration for new computers, phones, and tablets. Old devices are securely wiped and prepared for resale, handover, or recycling.</p>
-<h2>Cybersecurity &amp; Privacy</h2>
-<p>Practical security assessments tailored for private households. We configure password managers, enable two-factor authentication, review privacy settings, and provide straightforward guidance for every household member.</p>
-<h2>AV &amp; Entertainment Systems</h2>
-<p>Specification, installation oversight, and programming of audio-visual equipment across multiple rooms or zones. We coordinate with specialist AV installers and ensure your systems are configured correctly.</p>
-<h2>Ongoing Support &amp; Maintenance</h2>
-<p>Scheduled on-site visits for system health checks, software updates, and proactive maintenance. We monitor your environment and address small issues before they become larger problems.</p>
+<p>Central Technologies provides on-site technology support for private households that expect reliability, discretion, and clear communication.</p>
+<p>We support principals, families, and the assistants who act on their behalf. Engagements range from resolving a specific issue to acting as an ongoing household technology partner.</p>
+<p>The emphasis is on calm execution, sensible recommendations, and reducing the time the household has to spend thinking about technology.</p>
+<h2>Services Include</h2>
+<h3>Network &amp; Connectivity</h3>
+<p>Design and oversight of wired and wireless infrastructure for larger homes, garden offices, guest areas, and multi-building properties.</p>
+<h3>Smart Home Integration</h3>
+<p>Coordination and support for lighting, climate, entertainment, and security systems so the household can rely on technology without managing technical complexity.</p>
+<h3>Device Setup &amp; Migration</h3>
+<p>Procurement support, setup, and full migration for new computers, phones, and tablets, with careful handover and minimal disruption.</p>
+<h3>Cybersecurity &amp; Privacy</h3>
+<p>Practical security reviews for private households, including password management, two-factor authentication, privacy settings, and sensible protection for family members and staff.</p>
+<h3>AV &amp; Entertainment Systems</h3>
+<p>Specification support, installation oversight, and troubleshooting for multi-room audio, television, and entertainment systems.</p>
+<h3>Ongoing Support &amp; Maintenance</h3>
+<p>Regular reviews, updates, troubleshooting, and coordination so the household has one trusted point of contact instead of disconnected suppliers.</p>
 <h2>Engagement &amp; Fees</h2>
-<p>Consultations start at £300 + VAT. This covers an initial on-site assessment, hands-on work, and a written summary of findings. Ongoing support packages are structured around your household’s requirements and are available upon request.</p>
+<p>Consultations start at GBP300 + VAT and include an initial on-site assessment, hands-on work, and clear written follow-up.</p>
 <p><a href="/contact">Start an Inquiry</a> | <a href="/it-support-home-visit-london">About Home Visits</a></p>
-<footer><p>Central Technologies – Private technology management for households and executives across London and neighbouring counties.</p><p>Service Area: All London boroughs and nearby commuter regions including Surrey, Hertfordshire, Buckinghamshire, and Essex.</p><a href="/services">Our Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></footer>
+<footer><p>Trusted on-site technology support for private households, principals, and personal assistants across London and neighbouring counties.</p><a href="/contact">Request Consultation</a></footer>
 </div>`,
   },
-
   "/contact": {
-    title: "Request a Consultation | Central Technologies – London IT Support",
+    title: "Request a Consultation | Central Technologies",
     description:
-      "Request a private technology consultation with Central Technologies. On-site IT support for London households. We work with homeowners, executives, PAs, and managing agents.",
+      "Request a private technology consultation for your household or on behalf of a principal. Personal assistants and household representatives are welcome to enquire.",
     html: `<div>
-<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Households</a><a href="/contact">Inquire</a></nav>
+<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></nav>
 <h1>Request a Consultation</h1>
-<p>Whether you are a homeowner, executive, or personal assistant acting on behalf of a client, we welcome your inquiry. Please outline your requirements below and we will respond promptly if we believe we can be of service.</p>
-<p>All consultations begin with a brief conversation to understand your needs. If appropriate, we will arrange an on-site visit at your London residence at a time that suits your schedule. We also work with managing agents and family offices throughout Greater London.</p>
+<p>Whether you are enquiring for your own household, a principal, or a family office, you are welcome to send a concise brief.</p>
+<p>Personal assistants are encouraged to get in touch. We are used to working through assistants, managing agents, and household representatives who need a reliable technology contact they can trust.</p>
+<p>If appropriate, we will arrange an on-site visit at a time that suits the household and communicate clearly about next steps, access requirements, and any decisions that need approval.</p>
 <h2>What to Expect</h2>
-<p>After submitting your inquiry, a member of our team will review your requirements and respond within one working day. If your needs align with our expertise, we will schedule a brief introductory call or exchange to discuss the scope of work.</p>
-<p>Initial consultations start at £300 + VAT and include an on-site assessment, hands-on work, and a written summary. We are happy to coordinate directly with your PA or managing agent throughout the process.</p>
+<p>We review enquiries personally and aim to respond within one working day. A short note is fine - you do not need to write a technical brief for us to understand the situation.</p>
+<p>Initial consultations start at GBP300 + VAT and include an on-site assessment, hands-on work, and clear written follow-up.</p>
 <p>We work across all London boroughs and extend our services to select areas in Surrey, Hertfordshire, Buckinghamshire, and Essex.</p>
 <p><a href="/services">View Our Services</a> | <a href="/it-support-home-visit-london">About Home Visits</a></p>
-<footer><p>Central Technologies – Private technology management for households and executives across London and neighbouring counties.</p><p>Service Area: All London boroughs and nearby commuter regions including Surrey, Hertfordshire, Buckinghamshire, and Essex.</p><a href="/services">Our Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></footer>
+<footer><p>Trusted on-site technology support for private households, principals, and personal assistants across London and neighbouring counties.</p></footer>
 </div>`,
   },
-
   "/privacy": {
     title: "Privacy Policy | Central Technologies",
     description:
-      "Privacy policy for Central Technologies Limited. How we collect, use, and protect your personal data under UK GDPR.",
+      "Privacy policy for Central Technologies Limited. How we collect, use, and protect personal data under UK GDPR.",
     html: `<div>
-<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Households</a><a href="/contact">Inquire</a></nav>
+<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></nav>
 <h1>Privacy Policy</h1>
 <h2>Data Controller</h2>
 <p>Central Technologies Limited is the data controller for personal information collected through this website and during the course of our services. We are registered in England and Wales under Company No. 12231402, with VAT registration GB338720296.</p>
-<p>Hampstead, London · Tel: +44 7718 137455</p>
+<p>Hampstead, London | Tel: +44 7718 137455</p>
 <h2>Information We Collect</h2>
-<p>When you submit an inquiry through our website, we collect the information you provide — typically your name, email address, telephone number, and a description of your requirements. We use this solely to respond to your inquiry and, where appropriate, to arrange a consultation.</p>
+<p>When you submit an inquiry through our website, we collect the information you provide, typically your name, email address, telephone number, and a description of your requirements.</p>
 <h2>How We Use Your Information</h2>
-<p>Your personal data is used only for the purpose of responding to your inquiry and delivering our services. We do not share your information with third parties for marketing purposes, and we do not use tracking or advertising cookies on this website.</p>
-<h2>Data Retention</h2>
-<p>We retain inquiry data for a reasonable period necessary to fulfil the purpose for which it was collected.</p>
+<p>Your personal data is used only for the purpose of responding to your inquiry and delivering our services. We do not share your information with third parties for marketing purposes.</p>
 <h2>Your Rights</h2>
-<p>Under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, you have the right to access, correct, or request deletion of your personal data. You may also object to processing or request restriction of processing.</p>
-<h2>Contact</h2>
-<p>If you have any questions about how we handle your personal information, please <a href="/contact">get in touch</a>.</p>
-<footer><p>Central Technologies Limited · Company No. 12231402 · VAT No. GB338720296 · Tel +44 7718 137455 · Hampstead, London</p></footer>
+<p>Under UK GDPR and the Data Protection Act 2018, you have the right to access, correct, or request deletion of your personal data.</p>
+<footer><p>Central Technologies Limited | Company No. 12231402 | VAT No. GB338720296</p></footer>
 </div>`,
   },
-
   "/terms": {
     title: "Terms of Service | Central Technologies",
     description:
       "Terms of service for Central Technologies Limited. Website usage terms, service engagement conditions, and governing law.",
     html: `<div>
-<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Households</a><a href="/contact">Inquire</a></nav>
+<nav><a href="/">Central Technologies</a><a href="/services">Services</a><a href="/it-support-home-visit-london">Home Visits</a><a href="/private-household-technology">Private Households</a><a href="/contact">Request Consultation</a></nav>
 <h1>Terms of Service</h1>
 <h2>About Central Technologies</h2>
 <p>Central Technologies Limited is a technology management service registered in England and Wales under Company No. 12231402, with VAT registration GB338720296.</p>
-<p>Hampstead, London · Tel: +44 7718 137455</p>
+<p>Hampstead, London | Tel: +44 7718 137455</p>
 <h2>Use of This Website</h2>
-<p>This website is provided for informational purposes. By using it, you agree to these terms. We make reasonable efforts to keep the content accurate and up to date.</p>
+<p>This website is provided for informational purposes. By using it, you agree to these terms.</p>
 <h2>Services &amp; Engagement</h2>
-<p>All services described on this website are delivered by appointment and subject to availability. Specific terms, scope, and fees are agreed in writing before any engagement begins. Consultations start at £300 + VAT.</p>
-<h2>Intellectual Property</h2>
-<p>All content on this website is the property of Central Technologies Limited unless otherwise stated.</p>
-<h2>Limitation of Liability</h2>
-<p>Central Technologies Limited accepts no liability for any loss or damage arising from the use of this website or reliance on the information it contains.</p>
-<h2>Governing Law</h2>
-<p>These terms are governed by the laws of England and Wales. For any questions, please <a href="/contact">contact us</a>.</p>
-<footer><p>Central Technologies Limited · Company No. 12231402 · VAT No. GB338720296 · Tel +44 7718 137455 · Hampstead, London</p></footer>
+<p>All services described on this website are delivered by appointment and subject to availability. Consultations start at GBP300 + VAT.</p>
+<footer><p>Central Technologies Limited | Company No. 12231402 | VAT No. GB338720296</p></footer>
 </div>`,
   },
-
   "__404__": {
     title: "Page Not Found | Central Technologies",
     description: "The page you are looking for could not be found.",
-    html: `<div><h1>404 Page Not Found</h1><p>The page you are looking for could not be found.</p><p><a href="/">Return to Central Technologies homepage</a></p></div>`,
+    html: `<div><h1>404 Page Not Found</h1><p>The page you are looking for could not be found.</p><p><a href="/">Return to the Central Technologies homepage</a></p></div>`,
     robots: "noindex, follow",
   },
 };
@@ -378,7 +290,7 @@ function buildSchema(data: PrerenderData, path: string): string {
           url: `${CANONICAL_BASE}/`,
           name: "Central Technologies",
           description:
-            "Discreet technology management for high-end residential clients across Greater London",
+            "Discreet technology support for private households, principals, and personal assistants across London",
           publisher: { "@id": `${CANONICAL_BASE}/#organization` },
           inLanguage: "en-GB",
         },
