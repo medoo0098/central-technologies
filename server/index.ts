@@ -14,6 +14,12 @@ const REDIRECT_HOSTS = [
   "www.centraltechsupport.co.uk",
 ];
 
+const LEGACY_GONE_PATTERNS = [
+  /^\/index\.php(?:\/.*)?$/i,
+  /^\/wp-(?:admin|content|includes)(?:\/.*)?$/i,
+  /^\/xmlrpc\.php$/i,
+];
+
 app.use((req, res, next) => {
   const host = req.headers.host || "";
   if (REDIRECT_HOSTS.includes(host)) {
@@ -27,6 +33,11 @@ app.use((req, res, next) => {
   if (req.path.startsWith("/api") || req.path.startsWith("/assets")) return next();
 
   const cleanPath = req.path.split("?")[0];
+
+  if (LEGACY_GONE_PATTERNS.some((pattern) => pattern.test(cleanPath))) {
+    res.setHeader("X-Robots-Tag", "noindex, follow");
+    return res.status(410).type("text/plain").send("Gone");
+  }
 
   if (cleanPath === "/index.html" || cleanPath === "/index.htm") {
     const qs = req.originalUrl.includes("?") ? req.originalUrl.slice(req.originalUrl.indexOf("?")) : "";
@@ -106,9 +117,6 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
   if (process.env.NODE_ENV === "production") {
     serveStatic(app);
   } else {
@@ -116,10 +124,6 @@ app.use((req, res, next) => {
     await setupVite(httpServer, app);
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
   httpServer.listen(
     {

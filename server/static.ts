@@ -5,8 +5,7 @@ import { injectPrerenderContent, isKnownRoute, VALID_ROUTES } from "../shared/pr
 
 const CANONICAL_BASE = "https://centraltechnologies.london";
 
-function generateSitemapXml(): string {
-  const today = new Date().toISOString().split("T")[0];
+function generateSitemapXml(lastModifiedDate: string): string {
   const priorities: Record<string, string> = {
     "/": "1.0",
     "/services": "0.8",
@@ -20,7 +19,7 @@ function generateSitemapXml(): string {
   const urls = VALID_ROUTES.map((route) => {
     const loc = route === "/" ? CANONICAL_BASE + "/" : CANONICAL_BASE + route;
     const priority = priorities[route] || "0.5";
-    return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+    return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastModifiedDate}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
   }).join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`;
@@ -40,11 +39,12 @@ export function serveStatic(app: Express) {
 
   const indexHtmlPath = path.resolve(distPath, "index.html");
   const templateHtml = fs.readFileSync(indexHtmlPath, "utf-8");
+  const indexHtmlLastModified = fs.statSync(indexHtmlPath).mtime.toISOString().split("T")[0];
 
   app.get("/sitemap.xml", (_req, res) => {
     res.setHeader("Content-Type", "application/xml; charset=UTF-8");
     res.setHeader("Cache-Control", "public, max-age=86400");
-    res.send(generateSitemapXml());
+    res.send(generateSitemapXml(indexHtmlLastModified));
   });
 
   app.get("/robots.txt", (_req, res) => {
@@ -60,6 +60,7 @@ export function serveStatic(app: Express) {
 
     if (!isKnownRoute(req.originalUrl)) {
       res.status(404);
+      res.setHeader("X-Robots-Tag", "noindex, follow");
     }
 
     res.setHeader("Content-Type", "text/html; charset=UTF-8");
