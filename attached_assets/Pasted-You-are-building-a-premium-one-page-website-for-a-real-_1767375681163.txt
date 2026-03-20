@@ -1,0 +1,183 @@
+You are building a premium, one-page website for a real, operating business.
+
+You must follow the instructions exactly; do not invent positioning or pricing.
+
+––––––––––––––––––––––––
+BUSINESS DETAILS
+––––––––––––––––––––––––
+
+Company name:
+Central Technologies
+
+Domain:
+https://centraltechnologies.london
+
+Service category:
+Private technology management for affluent households.
+
+This is NOT:
+- consumer IT support
+- computer repair
+- retail tech help
+- price-sensitive or hourly work
+
+––––––––––––––––––––––––
+TARGET CLIENT
+––––––––––––––––––––––––
+
+Audience:
+Affluent households, busy professionals, and their personal assistants across all London boroughs and nearby commuter regions (Surrey, Berkshire, Essex, Kent, Hertfordshire).
+
+Client characteristics:
+- Limited time
+- Multiple premium devices
+- Expect discretion
+- Will not negotiate pricing
+- Want one trusted partner to “handle it”
+
+––––––––––––––––––––––––
+PRICING (MANDATORY)
+––––––––––––––––––––––––
+
+Minimum engagement fee:
+£300 + VAT
+
+This MUST be stated clearly as:
+- a minimum engagement fee (not hourly)
+- part of a professional service
+- NOT “starting from”
+
+Do NOT put the price in a design box. Integrate it into the text elegantly.
+
+––––––––––––––––––––––––
+TONE & STYLE
+––––––––––––––––––––––––
+
+Tone:
+- Calm
+- Confident
+- Reassuring
+- Slightly more engaging (addressing both homeowners and assistants)
+
+Design:
+- One-page layout
+- Modern, premium feel
+- Neutral palette (white, soft grey, charcoal)
+- Use a modern sans-serif font (e.g. Raleway or a similar Google Font) for headers and body text; ensure it loads in the CSS with `@import` if needed:contentReference[oaicite:2]{index=2}:contentReference[oaicite:3]{index=3}.
+- Clean typography, generous white space
+- No stock images of broken devices
+- No chat widgets
+- No instant booking
+- No emojis or exclamation marks
+
+––––––––––––––––––––––––
+PAGE STRUCTURE (USE EXACTLY)
+––––––––––––––––––––––––
+
+1. HERO SECTION
+
+Headline:
+Private Technology Management for London & Beyond
+
+Subheading:
+Discreet, professional technology management for busy households and executives across Greater London and neighbouring counties.
+
+Supporting text:
+Central Technologies takes full responsibility for your household’s networks, devices, and data so that technology supports your life without demanding your time. We serve homeowners directly or through trusted personal assistants with the same level of care.
+
+CTA:
+“Start a Private Inquiry”
+
+2. WHAT WE DO
+
+Heading:
+What We Do
+
+Copy:
+We ensure your home’s technology remains dependable, secure, and unobtrusive. Whether resolving persistent connectivity issues, replacing devices without disruption, or coordinating secure data migration, we handle planning, execution, and long-term support—on-site when required and remotely where practical. Our role is to anticipate and prevent problems, not merely react to them.
+
+3. TYPICAL ENGAGEMENTS
+
+Heading:
+Typical Engagements
+
+Include these sections with grounded language:
+
+• Home Networks  
+Reliable Wi-Fi and wired connectivity throughout the property, including difficult layouts and larger homes. Seamless coverage for work, entertainment, and guests.
+
+• New Devices & Replacement  
+Independent advice, procurement support, setup, and full data migration. Old devices are securely wiped and prepared for resale, handover, or recycling.
+
+• Privacy & Security  
+Practical security reviews, password management setup, two-factor authentication, and data protection measures tailored for private households.
+
+• Ongoing Household Support  
+Continued oversight of household technology, updates, troubleshooting, and liaison with service providers so you never wait on hold.
+
+4. OUR APPROACH
+
+Heading:
+Our Approach
+
+Subsections:
+
+• Discretion  
+We work quietly and professionally, treating client systems, layouts, and information as strictly confidential.
+
+• Respect for Time  
+Appointments are structured to resolve issues properly. Evening and weekend availability is offered, and we coordinate directly with assistants if preferred.
+
+• Independent Advice  
+We do not sell hardware or receive commissions. Recommendations are based solely on suitability, longevity, and value.
+
+5. ENGAGEMENT & FEES
+
+Heading:
+Engagement & Fees
+
+Copy:
+Central Technologies operates as a professional service, prioritising long-term relationships where we can understand and support your household’s technology needs.
+
+A minimum engagement fee of £300 + VAT applies. Detailed fee structures for ongoing support contracts are available upon request following an initial consultation.
+
+This allows us to deliver considered, permanent solutions rather than temporary fixes.
+
+6. PRIVATE INQUIRY
+
+Heading:
+Private Inquiry
+
+Copy:
+We work with a limited number of households to maintain service quality. Whether you are a homeowner or a personal assistant acting on their behalf, please outline your requirements below. We will respond if we believe we are a suitable fit.
+
+Include:
+- Name
+- Email
+- Phone (optional)
+- Short free-text requirements field
+
+Include privacy reassurance:
+“All inquiries are held in strict confidence. We do not respond to solicitations.”
+
+Include service area note:
+“Central Technologies serves clients across all London boroughs and nearby commuter regions.”
+
+––––––––––––––––––––––––
+SEO REQUIREMENTS (QUIET)
+––––––––––––––––––––––––
+
+- Semantic HTML5
+- Proper heading hierarchy (H1–H3)
+- Meta title: “Central Technologies – Private Technology Management for London & Beyond”
+- Meta description: “Central Technologies provides discreet, professional technology management for busy households and executives across London and neighbouring counties, handling networks, devices, and security with care and privacy.”
+- No keyword stuffing; SEO supports legitimacy, not mass traffic.
+
+––––––––––––––––––––––––
+OUTPUT
+––––––––––––––––––––––––
+
+Deliver:
+- A complete previewable HTML file
+- Embedded CSS using the chosen modern font
+- Ready to run in Replit preview

@@ -1,0 +1,59 @@
+You are Replit Agent working on the Central Technologies website (domain: https://centraltechnologies.london).
+
+TASK
+When an inquiry form is successfully submitted and saved to the database, send TWO emails:
+1) Internal notification to: info@centraltechsupport.co.uk
+   - Must contain ALL submitted fields (name, email, phone, requirements/message, and timestamp).
+   - Also include useful metadata: page URL, user agent, IP (if available), and enquiry ID from DB.
+2) Customer acknowledgement to the customer’s submitted email address
+   - MUST be HTML email
+   - Must match the website’s feel: discreet, premium, minimal, London-focused
+   - No marketing fluff, no placeholders
+   - Must clearly confirm receipt, set expectations (“we’ll respond soon”), and include a short summary of what they submitted.
+   - Include a plain-text fallback version.
+
+SENDER / TRANSPORT
+Use Microsoft 365 mailbox: info@centraltechsupport.co.uk to send BOTH emails.
+Preferred method: Microsoft Graph “Send mail” using OAuth (client credentials OR delegated—choose whichever fits the codebase).
+Do NOT use basic-auth SMTP. Basic auth for SMTP AUTH is being removed in Exchange Online; using Graph avoids this. (If SMTP is used, it must be OAuth-capable, not username/password.) 
+
+IMPLEMENTATION REQUIREMENTS
+- Email sending MUST happen server-side (never expose credentials in client).
+- If email send fails, the form submission must still succeed and be stored; log the error with enough detail to debug.
+- Add rate limiting / abuse protection: minimum 1 submission per IP per X seconds; basic honeypot field; reject obvious bots.
+- Validate input (email format, phone length, message length). Sanitize to prevent HTML injection in emails.
+- Do not send internal email if required fields are missing; log and store as failed validation.
+
+EMAIL CONTENT
+Internal email (subject example):
+  "New enquiry — Central Technologies — {Full Name} — {timestamp}"
+Body must include:
+  - Full Name
+  - Email
+  - Phone
+  - Requirements/Message (verbatim)
+  - Timestamp (UTC + London time if available)
+  - Enquiry ID
+  - Source URL
+  - IP + User Agent
+
+Customer email:
+- Subject: "We’ve received your enquiry — Central Technologies"
+- HTML layout:
+  - Simple centered container, dark text on white, subtle divider lines
+  - Brand name “Central Technologies” at top
+  - Short acknowledgement paragraph
+  - “Summary of your enquiry” block with their submitted fields
+  - Closing line emphasizing discretion and response timeframe
+  - Footer: “If you need to add details, reply to this email.”
+- Include a plain-text version.
+
+DOMAIN CONSISTENCY
+Customer email must link back to https://centraltechnologies.london/ (not .co.uk).
+Do NOT change site copy or design.
+
+DELIVERABLES
+1) The code changes with file paths.
+2) Environment variables needed (names + description).
+3) Setup steps for Microsoft 365 (Azure app registration + permissions) that I can follow.
+4) A short test plan: how to test locally and in production without spamming real customers.

@@ -1,0 +1,95 @@
+You are my Replit Agent. Do NOT change any code. Do NOT deploy. Only verify the LIVE site after publishing.
+
+Target: https://centraltechnologies.london/
+Goal: confirm the published changes are live, indexable, and locally SEO-ready for “on-site IT support / home visit IT support London”.
+
+====================
+1) LIVE CONFIRMATION (MUST DO)
+====================
+1. Fetch the LIVE homepage HTML exactly as served (view-source equivalent):
+- Paste the full <head>
+- Paste the first 250 lines of <body>
+
+2. Explicitly confirm:
+- Does the initial <body> contain meaningful text (H1 + paragraphs) WITHOUT requiring JS?
+OR
+- Is it still only <div id="root"></div>?
+
+3. Fetch and report LIVE HTTP status codes for:
+- /
+- /robots.txt
+- /sitemap.xml
+If possible, include content-type and any x-robots-tag headers.
+
+====================
+2) KEYWORD + HERO CHECK (PREMIUM TONE)
+====================
+4. Extract and paste verbatim:
+- <title>
+- meta description
+- H1
+- hero subheading
+- first paragraph under hero
+
+5. Check the presence of these phrases (or very close variants) in the INITIAL HTML (not rendered DOM):
+- “on-site IT support”
+- “home visit” or “home visits”
+- “London” or “Greater London”
+- “personal assistants”
+- “managing agents”
+Mark each: PRESENT / PARTIAL / MISSING
+
+====================
+3) LOCAL TRUST SIGNALS (NAP + CONTACT)
+====================
+6. Confirm whether these are visible on the page (not only schema):
+- Business name
+- Telephone number (must be clickable tel:)
+- Location reference (Hampstead, London)
+If missing visually, note “schema-only”.
+
+====================
+4) STRUCTURED DATA (JSON-LD) VALIDATION
+====================
+7. Extract ALL JSON-LD blocks verbatim from the live homepage.
+
+8. Confirm whether schema includes:
+- LocalBusiness and/or ProfessionalService
+- legalName “Central Technologies Limited”
+- telephone +447718137455
+- addressLocality Hampstead
+- addressRegion London
+- addressCountry GB
+- vatID GB338720296
+- identifier includes Companies House 12231402
+- areaServed includes London / Greater London
+Mark each: PRESENT / MISSING
+
+====================
+5) SITEMAP CHECK
+====================
+9. Fetch and paste the full sitemap.xml and report:
+- number of URLs
+- list each <loc> value
+
+====================
+6) FINAL VERDICT + NEXT ACTION
+====================
+10. Give a single verdict:
+- READY to request indexing
+OR
+- NOT READY (and why)
+
+11. If READY:
+- Provide the exact list of URLs that should be submitted via Google Search Console URL Inspection.
+
+OUTPUT FORMAT (STRICT)
+A) Live indexability (2 bullets)
+B) Initial HTML body content verdict (1 line)
+C) Hero/keywords checklist
+D) Local trust signals
+E) JSON-LD checklist
+F) Sitemap URLs list
+G) READY / NOT READY + next action
+
+Stop.

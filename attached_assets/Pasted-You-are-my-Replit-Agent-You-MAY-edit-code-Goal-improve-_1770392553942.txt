@@ -1,0 +1,42 @@
+You are my Replit Agent. You MAY edit code. Goal: improve the HERO section for engagement + SEO, while keeping the site premium and discreet (high-income households, executives, personal assistants, managing agents). Do NOT change the overall design system, layout structure, fonts, or spacing rules—only update the hero text content and (if present) CTA labels. Do NOT add new sections, images, icons, animations, or “cheap IT repair” language.
+
+NON-NEGOTIABLE SEO + BRAND RULES
+- Must clearly include: “On-site IT support”, “home visits”, and “London” (or “Greater London”) in the hero area.
+- Must explicitly mention “personal assistants” and “managing agents” (PA-friendly).
+- Must avoid “PC repair”, “cheap”, “same-day fix”, “call-out fee” tone.
+- Keep tone: calm, professional, discreet, relationship-based.
+- Keep length: headline max ~10 words, subheading 1–2 sentences, supporting copy 2 short paragraphs max.
+
+CONTENT TO APPLY (replace current hero copy with this)
+Headline (H1):
+Private, On-Site IT Support for London Households
+
+Subheading (short lead line under H1):
+Discreet technology management and home IT support for busy families, executives, and the personal assistants who support them across Greater London.
+
+Supporting copy (two short paragraphs):
+From resolving urgent issues to overseeing your entire home technology environment, Central Technologies provides calm, reliable on-site IT support through scheduled home visits across London.
+
+We don’t offer rushed, transactional fixes. We build long-term relationships based on discretion, continuity, and tailored solutions that fit how your household operates.
+
+Microline (small text under hero, not a new section; keep it subtle):
+Home visits by appointment · Serving all London boroughs · PA and managing agent friendly
+
+CTA (if a primary CTA exists in the hero):
+Change button label to: Request a Home Visit
+If there is a secondary CTA: View Services
+
+IMPLEMENTATION STEPS
+1) Locate the hero component/source (likely in client/src/components or client/src/pages/Home.tsx).
+2) Replace ONLY the hero text nodes with the above content.
+3) Ensure the H1 remains an actual <h1> element.
+4) Ensure the microline is rendered as a subtle text element (e.g., small paragraph/span) under the hero copy.
+5) Do not change any surrounding layout wrappers or class names unless required to keep styling consistent.
+
+OUTPUT FORMAT
+A) Identify the file(s) edited (paths)
+B) Provide a concise diff-style snippet showing only the hero section before/after
+C) Confirm the hero includes the required keywords: on-site IT support, home visits, London, personal assistants, managing agents
+D) Confirm no other content or design elements were changed
+
+Stop when done.

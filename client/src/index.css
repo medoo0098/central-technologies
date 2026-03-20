@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Premium Neutral Palette */
+  --background: 0 0% 98%;      /* Very light grey/white */
+  --foreground: 220 10% 10%;   /* Deep charcoal */
+  
+  --primary: 220 10% 20%;      /* Dark charcoal */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 0 0% 94%;       /* Soft grey for cards/sections */
+  --secondary-foreground: 220 10% 10%;
+  
+  --muted: 0 0% 90%;
+  --muted-foreground: 220 5% 40%;
+  
+  --accent: 210 20% 96%;
+  --accent-foreground: 220 10% 15%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 220 10% 20%;
+  
+  --radius: 0.25rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/10 selection:text-primary;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight text-primary;
+    font-weight: 500;
+  }
+
+  p {
+    @apply leading-relaxed text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-card {
+    @apply bg-white/50 backdrop-blur-sm border border-white/20 shadow-sm;
+  }
+}

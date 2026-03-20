@@ -1,0 +1,69 @@
+You are my Replit Agent. Your job is to collect and report all SEO + indexing + hosting facts for the Central Technologies website so we can diagnose why it doesn’t show in Google for “IT support home visit London”.
+
+DO NOT change any code. DO NOT deploy anything. Only inspect and report.
+
+1) Identify the site + hosting
+- Domain(s) used (apex + www)
+- Hosting platform/provider (Replit hosting, Cloudflare Pages, Netlify, Vercel, GitHub Pages, custom VPS, etc.)
+- Public base URL(s) and any redirects (http→https, www↔non-www)
+- If behind Cloudflare: confirm proxied status and any caching rules (if visible)
+
+2) Crawl and indexing controls (provide exact file contents/headers where possible)
+- robots.txt (full contents + URL)
+- sitemap.xml (full contents + URL)
+- any X-Robots-Tag headers for main pages
+- any meta robots tags (index/noindex) per page
+- canonical tags for each page (exact href values)
+- hreflang (if any)
+- HTTP status codes for:
+  - /
+  - /index.html
+  - /robots.txt
+  - /sitemap.xml
+  - any key service pages
+- Confirm if the site is single-page only or multi-page
+
+3) On-page Local SEO signals
+- Is “London” mentioned in <title>, H1, above-the-fold copy?
+- Is “home visit”, “on-site”, “in-home IT support” mentioned?
+- Is there a visible NAP block (Name, Address, Phone) and is it consistent?
+
+4) Structured Data (JSON-LD) audit
+- Extract ALL JSON-LD blocks from <head> and <body> and paste them verbatim.
+- List each schema type found (Organization, LocalBusiness, Service, Offer, FAQ, etc.)
+- Specifically check for:
+  - LocalBusiness or ProfessionalService (preferred)
+  - address object with addressLocality “London”
+  - areaServed (e.g., London boroughs)
+  - geo (optional)
+  - hasMap (Google Maps URL, optional)
+  - sameAs social profiles
+  - telephone
+  - openingHoursSpecification
+- If missing, report “MISSING: …” (do not add anything)
+
+5) OpenGraph + metadata
+- title/description per page
+- og:title/og:description/og:url
+- favicon and apple-touch-icon paths
+
+6) Performance + render issues that affect indexing
+- Is the primary content server-rendered HTML or JS-rendered?
+- If JS-rendered: show whether meaningful text exists in initial HTML response.
+- Any blocking scripts preventing content render?
+- Any 404 assets referenced (CSS/JS/images)
+
+7) Evidence from Search Console (if files exist in repo)
+- If there is any exported GSC data, logs, or notes, list them.
+- Otherwise, provide a checklist of GSC items we must verify.
+
+OUTPUT FORMAT (must follow exactly):
+A) Hosting & URLs (bullets)
+B) Indexing Controls (with file contents in fenced code blocks)
+C) Canonicals & Status Codes (table)
+D) Local Signals (bullets)
+E) Structured Data (code blocks + a short “Missing fields” list)
+F) Render/JS notes (bullets)
+G) Suspected blockers ranked (top 5)
+
+When done, stop.

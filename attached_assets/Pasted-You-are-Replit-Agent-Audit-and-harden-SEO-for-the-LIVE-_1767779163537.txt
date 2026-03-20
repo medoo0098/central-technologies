@@ -1,0 +1,81 @@
+You are Replit Agent. Audit and harden SEO for the LIVE Central Technologies marketing site.
+
+Non-negotiable rules:
+- No placeholders (no example.com, fake phone/address, lorem, “TBD”, fake reviews).
+- Do not change visible design or rewrite marketing copy.
+- You must VERIFY by fetching the live site and reporting evidence (URLs, status codes, headers, extracted tags).
+- If something cannot be verified, write: NOT VERIFIED, and state exactly why.
+
+INPUTS YOU MUST ASSUME (unless proven otherwise):
+- Preferred domain should be the real live domain used by customers.
+- The site is a one-page marketing site with a contact form.
+
+STEP 1 — Identify the canonical domain (LIVE)
+- Try both https://centraltechnologies.co.uk and https://www.centraltechnologies.co.uk
+- Report:
+  - final resolved URL after redirects
+  - redirect chain (http->https, www/non-www)
+  - status codes for each hop
+  - confirm single preferred host/version
+
+STEP 2 — Crawl the live homepage and extract SEO signals
+From the final canonical homepage URL, extract and report:
+- <title>
+- meta description
+- canonical link tag
+- meta robots
+- Open Graph and Twitter tags (og:url, og:title, og:description, og:image, twitter:card, etc.)
+- H1 text and heading structure
+- JSON-LD blocks (types present, @id usage)
+
+STEP 3 — robots.txt and sitemap.xml verification (LIVE)
+Fetch:
+- /robots.txt
+- /sitemap.xml
+Report:
+- status code
+- content correctness
+- robots includes Sitemap: directive pointing to the correct preferred domain
+- sitemap contains ONLY real URLs, using the canonical preferred domain (no mismatched host)
+- add <lastmod> if missing (optional but recommended)
+
+STEP 4 — Indexing-risk checks (LIVE)
+Verify these explicitly:
+- No meta robots noindex
+- No X-Robots-Tag: noindex response header
+- No canonical mismatch (canonical points to a different host or path)
+- No duplicate accessible variants causing “Alternate page with proper canonical tag”
+- Confirm the OG image URL resolves with 200 and is publicly accessible
+
+STEP 5 — Structured data validation
+- Validate JSON-LD structure (no fake reviews/ratings)
+- Ensure ProfessionalService includes:
+  - name, url, description
+  - areaServed (Greater London)
+  - serviceType listing the 6 services (or hasOfferCatalog)
+  - sameAs only if real profiles exist
+- Add WebSite schema + SearchAction only if site actually has search (otherwise omit)
+- Add Organization schema if appropriate (truthful fields only)
+
+STEP 6 — Output exact fixes (repo edits)
+Provide copy/paste-ready patches with file paths:
+- client/public/robots.txt
+- client/public/sitemap.xml
+- client/index.html (head tags + JSON-LD)
+Include:
+- corrected canonical URL
+- corrected OG/Twitter URLs
+- corrected sitemap/robots references
+- redirect guidance if host configuration is the issue (what to set at hosting layer)
+
+STEP 7 — Placeholder scan
+Scan the repo for placeholder strings:
+- lorem, placeholder, example.com, “Your Company”, “TBD”
+Report exact file + line numbers.
+Form input placeholders like “email@example.com” are OK.
+
+FINAL OUTPUT FORMAT
+A) Live verification results (URLs, status codes, headers, extracted tags)
+B) Issues (P0/P1/P2 priority)
+C) Exact patches/snippets with file paths
+D) Deployment + verification checklist (Search Console, inspect URL, request indexing)

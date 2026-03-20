@@ -1,0 +1,56 @@
+You are Replit Agent. Perform a verification-only SEO + indexing audit for Central Technologies.
+
+LIVE DOMAINS
+Primary: https://centraltechnologies.london/
+Secondary variants to test:
+- https://www.centraltechnologies.london/
+- http://centraltechnologies.london/
+- http://www.centraltechnologies.london/
+
+GOAL
+Confirm the site is technically correct for Google indexing and that no duplicate host variants are serving 200.
+You must provide EVIDENCE (exact URLs tested, status codes, redirect chains, key extracted tags/headers).
+Do not add placeholders or rewrite visible copy.
+
+STEP 1 — Redirect/canonical proof (must be explicit)
+For each variant URL above:
+- Show redirect chain and final destination
+- Confirm 301 (not 302)
+- Confirm final is https://centraltechnologies.london/ (non-www)
+Then extract from the final homepage:
+- <title>, meta description
+- canonical href
+- meta robots
+- og:url, og:image, twitter:card + twitter:image
+- H1 text
+- JSON-LD schema types and any @id linking
+
+STEP 2 — robots + sitemap proof
+Fetch and report:
+- https://centraltechnologies.london/robots.txt (status + contents)
+- https://centraltechnologies.london/sitemap.xml (status + first URL entry)
+Confirm:
+- robots contains correct sitemap URL
+- sitemap uses canonical host
+- sitemap is valid XML (correct namespace)
+- no blocked crawling
+
+STEP 3 — Indexing risk checks
+Verify:
+- no meta robots “noindex”
+- no X-Robots-Tag header “noindex”
+- no duplicate URL variants returning 200
+- og:image returns 200 and is publicly accessible
+- page returns 200 with correct content-type text/html; charset=utf-8
+
+STEP 4 — Repo confirmation
+Check repository for:
+- any lingering .co.uk references inside canonical/og/sitemap/robots/schema
+- placeholders (lorem, example.com, Your Company, TBD)
+Return file paths and exact lines.
+
+DELIVERABLE
+Return:
+A) Evidence table (URL tested → status/redirect → notes)
+B) Pass/Fail checklist with fixes if any
+C) Exact patch snippets if anything is wrong

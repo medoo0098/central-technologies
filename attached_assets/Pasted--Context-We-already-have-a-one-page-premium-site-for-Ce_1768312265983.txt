@@ -1,0 +1,45 @@
+# Context
+We already have a one-page premium site for Central Technologies from the previous prompt.
+This refinement must adjust only the specified content and sections below; do not alter the overall structure, design aesthetic, or typography.
+
+## 1. Hero Section – Differentiate from commodity IT services
+After the subheading, insert a short paragraph that contrasts Central Technologies with generic “same-day IT repair” shops.  Emphasise that the service is bespoke, privacy‑focused, and aimed at households seeking a discreet partner rather than quick fixes.
+
+Example text to include (you may adjust wording for flow):
+“Unlike common ‘same-day’ IT repair services that advertise quick fixes for any problem, Central Technologies provides bespoke, long-term technology management. Our focus is on discretion, reliability, and tailored solutions for your unique household.”
+
+Keep the rest of the hero content unchanged, including the call-to-action.
+
+## 2. Ongoing Support Section – Clarify scope
+In the “Ongoing Support & Maintenance” section, revise the description so it no longer implies that you replace or manage clients’ internet providers.  Instead, stress periodic health checks and advisory support.
+
+Replace the existing paragraph with something like:
+“Scheduled health checks, software updates, and system reviews to keep your environment secure and reliable. We offer advice and support when troubleshooting or interacting with service providers, while you remain in control of your accounts and choices.”
+
+## 3. Engagement & Fees Section – Integrate price elegantly
+Remove any box styling or special emphasis around the fee.  Incorporate the fee naturally within the text.  For example:
+
+“Central Technologies operates as a professional service, prioritising long-term relationships where we can understand and support your household’s technology needs.  Consultations start at £300 + VAT.  Detailed fee structures for ongoing support contracts are available upon request following an initial consultation.”
+
+Ensure the £300 + VAT minimum fee is clear but appears as part of the paragraph, not isolated in a container.
+
+## 4. New About Section – Establish expertise
+Add a new section between “Approach” and “Engagement & Fees” titled “About Us.”  Keep it concise and trust‑building.  For example:
+
+**About Us**
+“Central Technologies is led by a seasoned technology professional with years of experience supporting private households and executive clients in London.  Our clients come from long-term relationships built on trust and discretion.  Having served with Computer Doctor for several years before launching Central Technologies, we bring an exceptional track record and deep industry knowledge.”
+
+Use the same font and styling as other section headings and body text.
+
+## 5. SEO Meta Description – Update for differentiation
+Ensure the meta description reflects the refined positioning.  For example:
+“Central Technologies offers bespoke technology management for households and executives across London and neighbouring regions.  Unlike same-day repair services, we provide discreet, long-term support for networks, devices, and data, with consultations starting at £300 + VAT.”
+
+The meta title can remain as “Central Technologies – Private Technology Management for London & Beyond.”
+
+## 6. Maintain Design & Accessibility
+- Maintain the existing modern sans-serif font and neutral colour palette.
+- Keep the one-page layout and clear section headings.
+- Retain accessibility considerations (e.g., sufficient contrast, clear focus states).
+
+Only make the content changes described above.  Do not introduce new design components or change the existing layout structure.
